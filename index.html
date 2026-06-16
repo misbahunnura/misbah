@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Misbahun</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND ANIMASI -->
+<div class="bg"></div>
+
+<!-- HOME -->
+<div id="home" class="card">
+    <img src="jpg.jpeg">
+    <h2>MISBAHUN NURA</h2>
+    <p>Mahasiswa Teknik Informatika</p>
+    <button onclick="goProfile()" class="btn">Lihat Profil</button>
+</div>
+
+<!-- PROFIL -->
+<div id="profil" class="container hidden">
+
+    <h1>👤 Profil Lengkap</h1>
+
+    <div class="profile-top">
+        <img src="jpg.jpeg">
+        <div>
+            <h2>MISBAHUN NURA</h2>
+            <p>Saya adalaha mahasiswa semester 4 di bidang Teknik Informatika yang berfokus dan memiliki minat besar dalam pengembangan web</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📄 Data Diri</h2>
+        <table>
+            <tr><td>Nama</td><td>: Misbahun Nura</td></tr>
+            <tr><td>NPM</td><td>: 24105111086</td></tr>
+            <tr><td>Kelas</td><td>: 4.3</td></tr>
+            <tr><td>TTL</td><td>: Riweuek, 23-06-2006</td></tr>
+            <tr><td>Alamat</td><td>: Desa Kp. Riweuek</td></tr>
+            <tr><td>Kampus</td><td>: Universitas Jabal Ghafur</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🚀 Project</h2>
+        <div class="project-card">
+            <a href="https://misbahunnura.github.io/platform/" target="_blank">project web Video</a>
+        </div>
+
+        <div class="project-card">
+            <a href="https://misbahunnura.github.io/lingkungan/" target="_blank">project Web Lingkungan</a>
+        </div>
+
+        <div class="project-card">
+            <a href="https://misbahunnura.github.io/konsul/" target="_blank">konsultasi psikolog online</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>💻 Skill</h2>
+
+        <p>HTML</p>
+        <div class="bar"><div style="width:90%"></div></div>
+
+        <p>CSS</p>
+        <div class="bar"><div style="width:85%"></div></div>
+
+        <p>JavaScript</p>
+        <div class="bar"><div style="width:80%"></div></div>
+
+        <p>PHP</p>
+        <div class="bar"><div style="width:70%"></div></div>
+    </div>
+
+    <button onclick="goBack()" class="btn">← Kembali</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
