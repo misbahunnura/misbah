@@ -2,83 +2,147 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Misbahun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BACKGROUND ANIMASI -->
-<div class="bg"></div>
+<!-- BACKGROUND -->
+<div class="bg-texture" aria-hidden="true"></div>
+<div class="bg-shape shape-1" aria-hidden="true"></div>
+<div class="bg-shape shape-2" aria-hidden="true"></div>
+<div class="bg-shape shape-3" aria-hidden="true"></div>
 
 <!-- HOME -->
-<div id="home" class="card">
-    <img src="jpg.jpeg">
-    <h2>MISBAHUN NURA</h2>
-    <p>Mahasiswa Teknik Informatika</p>
-    <button onclick="goProfile()" class="btn">Lihat Profil</button>
+<div id="home" class="card fade-in">
+    <div class="avatar-wrap">
+        <span class="orbit-dot dot-a"></span>
+        <span class="orbit-dot dot-b"></span>
+        <div class="avatar-ring">
+            <img src="jpg.jpeg" alt="Foto Misbahun Nura" class="avatar" onerror="this.onerror=null; this.classList.add('avatar-fallback');">
+        </div>
+    </div>
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="name">Misbahun Nura</h1>
+    <p class="tagline">Mahasiswa Teknik Informatika</p>
+    <button onclick="goProfile()" class="btn">
+        Lihat Profil
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
 </div>
 
 <!-- PROFIL -->
-<div id="profil" class="container hidden">
+<div id="profil" class="card wide hidden">
 
-    <h1>👤 Profil Lengkap</h1>
+    <a href="#" class="back-link" onclick="goBack(); return false;">
+        <span class="back-arrow">←</span> Kembali
+    </a>
 
     <div class="profile-top">
-        <img src="jpg.jpeg">
+        <img src="jpg.jpeg" alt="Foto Misbahun Nura" class="avatar avatar-sm" onerror="this.onerror=null; this.classList.add('avatar-fallback');">
         <div>
-            <h2>MISBAHUN NURA</h2>
-            <p>Saya adalaha mahasiswa semester 4 di bidang Teknik Informatika yang berfokus dan memiliki minat besar dalam pengembangan web</p>
+            <h2 class="name-sm">Misbahun Nura</h2>
+            <p class="bio">Saya adalah mahasiswa semester 4 di bidang Teknik Informatika yang berfokus dan memiliki minat besar dalam pengembangan web.</p>
         </div>
     </div>
 
-    <div class="section">
-        <h2>📄 Data Diri</h2>
-        <table>
-            <tr><td>Nama</td><td>: Misbahun Nura</td></tr>
-            <tr><td>NPM</td><td>: 24105111086</td></tr>
-            <tr><td>Kelas</td><td>: 4.3</td></tr>
-            <tr><td>TTL</td><td>: Riweuek, 23-06-2006</td></tr>
-            <tr><td>Alamat</td><td>: Desa Kp. Riweuek</td></tr>
-            <tr><td>Kampus</td><td>: Universitas Jabal Ghafur</td></tr>
-        </table>
-    </div>
-
-    <div class="section">
-        <h2>🚀 Project</h2>
-        <div class="project-card">
-            <a href="https://misbahunnura.github.io/platform/" target="_blank">project web Video</a>
+    <section class="section">
+        <h3 class="section-title">Data Diri</h3>
+        <div class="info-list">
+            <div class="info-row">
+                <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                <span class="info-label">Nama</span>
+                <span class="info-value">Misbahun Nura</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h6M7 13h4"/><circle cx="16.5" cy="15" r="1.5"/></svg></span>
+                <span class="info-label">NPM</span>
+                <span class="info-value">24105111086</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span>
+                <span class="info-label">Kelas</span>
+                <span class="info-value">4.3</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="info-label">TTL</span>
+                <span class="info-value">Riweuek, 23-06-2006</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span class="info-label">Alamat</span>
+                <span class="info-value">Desa Kp. Riweuek</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V7l6-4 6 4v14M10 21v-6h4v6"/></svg></span>
+                <span class="info-label">Kampus</span>
+                <span class="info-value">Universitas Jabal Ghafur</span>
+            </div>
         </div>
+    </section>
 
-        <div class="project-card">
-            <a href="https://misbahunnura.github.io/lingkungan/" target="_blank">project Web Lingkungan</a>
+    <section class="section">
+        <h3 class="section-title">Project</h3>
+        <div class="project-grid">
+            <a href="https://misbahunnura.github.io/platform/" target="_blank" class="project-item">
+                <div>
+                    <span class="project-tag">Media &amp; Video</span>
+                    <span class="project-name">Web Video</span>
+                </div>
+                <svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="https://misbahunnura.github.io/lingkungan/" target="_blank" class="project-item">
+                <div>
+                    <span class="project-tag">Lingkungan</span>
+                    <span class="project-name">Web Lingkungan</span>
+                </div>
+                <svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="https://misbahunnura.github.io/konsul/" target="_blank" class="project-item">
+                <div>
+                    <span class="project-tag">Kesehatan Mental</span>
+                    <span class="project-name">Konsultasi Psikolog Online</span>
+                </div>
+                <svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="http://websiteku123.free.je" target="_blank" class="project-item">
+                <div>
+                    <span class="project-tag">AI Tools</span>
+                    <span class="project-name">Mesin Kata</span>
+                </div>
+                <svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
         </div>
+    </section>
 
-        <div class="project-card">
-            <a href="https://misbahunnura.github.io/konsul/" target="_blank">project konsultasi psikolog online</a>
+    <section class="section">
+        <h3 class="section-title">Skill</h3>
+        <div class="skill-list">
+            <div class="skill-row">
+                <div class="skill-head"><span>HTML</span><span>90%</span></div>
+                <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-head"><span>CSS</span><span>85%</span></div>
+                <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-head"><span>JavaScript</span><span>80%</span></div>
+                <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-head"><span>PHP</span><span>70%</span></div>
+                <div class="skill-track"><div class="skill-fill" style="width:70%"></div></div>
+            </div>
         </div>
-        
-        <div class="project-card">
-            <a href="http://websiteku123.free.je" target="_blank">project mesin kata</a>
-        </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>💻 Skill</h2>
-
-        <p>HTML</p>
-        <div class="bar"><div style="width:90%"></div></div>
-
-        <p>CSS</p>
-        <div class="bar"><div style="width:85%"></div></div>
-
-        <p>JavaScript</p>
-        <div class="bar"><div style="width:80%"></div></div>
-
-        <p>PHP</p>
-        <div class="bar"><div style="width:70%"></div></div>
-    </div>
-
-    <button onclick="goBack()" class="btn">← Kembali</button>
+    <p class="footer-note">Dibuat dengan penuh perhatian ✦ 2026</p>
 
 </div>
 
