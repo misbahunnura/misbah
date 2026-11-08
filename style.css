@@ -54,6 +54,7 @@ h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;font
 .pcard:nth-child(3){--i:2;--c1:#3d1c34}
 .pcard:nth-child(4){--i:3;--c1:#47213c}
 .pcard:nth-child(5){--i:4;--c1:#47213c}
+.pcard:nth-child(6){--i:5;--c1:#47213c}
 .pcard:hover{border-color:var(--rose)}
 .pinfo{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
 .p-tag{color:var(--rose);font-size:14px}
